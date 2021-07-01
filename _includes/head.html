@@ -33,25 +33,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-<!-- Translate website -->
-<script>
-/*
-  function googleTranslateElementInit() {
-
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: "en",
-      includedLanguages: "en,id",
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    },
-    "google_translate_element"
-  );
-}
-setTimeout( function() {
-  googleTranslateElementInit();
-  }, 500);
-*/
-</script>
   <!-- GA -->
   {% if jekyll.environment == 'production' %}
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
@@ -59,15 +40,7 @@ setTimeout( function() {
 
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ57VSC3B5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-BJ57VSC3B5');
-</script>
     {% if site.google_analytics.pv.proxy_endpoint %}
       {% assign proxy_url = site.google_analytics.pv.proxy_endpoint
         | replace: "https://", "" | split: "/" | first | prepend: "https://" %}
@@ -90,11 +63,12 @@ setTimeout( function() {
   {% include css-selector.html %}
 
   <!-- JavaScripts -->
-<!-- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 
   <script defer
     src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script>
 
   {% include js-selector.html %}
+
 </head>
