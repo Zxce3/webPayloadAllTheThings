@@ -14,7 +14,7 @@ jobs:
         with:
           command: jekyll build
       - name: action
-        uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: FirebaseExtended/action-hosting-deploy@v0.6-alpha
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_PAYLOADSALLTHETHINGS }}'
