@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build ⚙️
-        uses: vivi90/jekyll-minimal-action@v1.1.0
-        with:
-          command: jekyll build
+      - run: npm ci && npm run build
+      # - name: Build ⚙️
+      #   uses: vivi90/jekyll-minimal-action@v1.1.0
+      #   with:
+      #     command: jekyll build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
