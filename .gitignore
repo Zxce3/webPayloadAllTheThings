@@ -4,6 +4,7 @@
 !.editorconfig
 !.nojekyll
 !.travis.yml
+!.firebaserc
 # bundler cache
 #_site
 vendor
